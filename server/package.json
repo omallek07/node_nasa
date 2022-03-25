@@ -1,12 +1,13 @@
 {
-  "name": "server",
+  "name": "node_nasa_api",
   "version": "1.0.0",
   "description": "",
   "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test-watch": "jest --watch",
     "start": "node src/server.js",
-    "watch": "nodemon serc/server.js"
+    "watch": "nodemon src/server.js"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "cors": "^2.8.5",
     "csv-parse": "^5.0.4",
     "express": "^4.17.3",
+    "jest": "^27.5.1",
     "morgan": "^1.10.0"
   }
 }
