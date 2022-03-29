@@ -12,12 +12,16 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "jest": {
+    "testEnvironment": "node"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "csv-parse": "^5.0.4",
     "express": "^4.17.3",
     "jest": "^27.5.1",
     "mongoose": "^6.2.8",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "supertest": "^6.2.2"
   }
 }
