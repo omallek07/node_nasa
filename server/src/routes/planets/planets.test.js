@@ -1,13 +1,11 @@
 const request = require("supertest");
 const app = require("../../app");
 const { loadPlanetsData } = require("../../models/planets.model");
-
 const { mongoConnect, mongoDisconnect } = require("../../services/mongo");
 
 describe("Planets API", () => {
   beforeAll(async () => {
     await mongoConnect();
-    await loadPlanetsData();
   });
 
   afterAll(async () => {
@@ -31,7 +29,7 @@ describe("Planets API", () => {
     //   planet["koi_prad"] < 1.6;
     */
     test("All  planets should have CONFIRMED koi_disposition", async () => {
-      const { body: planets } = await request(app).get("/planets");
+      const { body: planets } = await request(app).get("/v1/planets");
 
       expect(planets).toEqual(
         expect.arrayContaining([
